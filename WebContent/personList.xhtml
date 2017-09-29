@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />     
+
+    <title>Kişiler</title>
+
+</h:head>
+
+<h:body>
+
+    <center><h2><h:outputText value="Kullanıcılar"/></h2></center>
+
+    <h:form id="personForm">
+     
+               <f:facet name="header">Kişi Ekle</f:facet>
+                 <center> <h:commandButton action="personCreate.xhtml?faces-redirect=true" immediate="true" value="Kişi Ekle" styleClass="btn btn-success"></h:commandButton></center> 
+          <div class="form-group">        
+            <div class="col-sm-2">
+                <h:inputText value="#{personController.adSoyad}" styleClass="form-control"  />
+                 <center> <h:commandButton action="personController.personListMet(personController)" value="Kişi Ara veya Listele" styleClass="btn btn-success"></h:commandButton></center> 
+            </div>
+            </div>
+        <div class="col-sm-2">  
+        <h:dataTable id="personTable" binding="#{table}" value="#{personController.personListMet(personController)}" var="person" styleClass="table table-striped table-bordered tableUpdated">     
+            <h:column>
+                <f:facet name="header">Ad Soyad</f:facet>
+               <h:commandButton action="#{personController.selectid(person.id)}" immediate="true" value="#{person.adSoyad}" >              
+               </h:commandButton>
+              </h:column>
+        </h:dataTable>
+       </div>
+    </h:form>
+</h:body>
+</html>

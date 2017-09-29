@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />     
+
+    <title>JSF JPA Crud Example</title>
+
+    <style type="text/css">
+        .tableUpdated {
+
+            width: 90% !important;
+
+            margin: 17px 58px 0 !important;
+        }
+
+        .btnSpace {
+
+            margin: 17px;
+
+        }     
+
+    </style>
+
+</h:head>
+
+<h:body>
+
+    <center><h2><h:outputText value="Kişi Ayrıntıları"/></h2></center>
+
+    <h:form id="personForm">
+
+        <h:dataTable id="personTable"  value="#{personController.personDetailById(personController.getSid())}" var="person" styleClass="table table-striped table-bordered tableUpdated">
+
+                 
+                <h:column>
+                  <f:facet name="header">Ad Soyad</f:facet> 
+                           <h:outputText value="#{person.adSoyad}" />    
+                </h:column>
+                 <h:column>
+
+                  <f:facet name="header">Cep Tel</f:facet>              
+                     <h:outputText value="#{person.cepTel}" />
+                </h:column>
+                 <h:column>
+
+                  <f:facet name="header">İş Tel</f:facet>              
+                     <h:outputText value="#{person.isTel}" />
+                </h:column>
+                 <h:column>
+
+                  <f:facet name="header">Ev Tel</f:facet>              
+                     <h:outputText value="#{person.evTel}" />
+                </h:column>
+                 <h:column>
+
+                  <f:facet name="header">Eposta</f:facet>              
+                     <h:outputText value="#{person.eposta}" />
+                </h:column>
+                <h:column>
+                <f:facet name="header">Düzezenle</f:facet>
+                <h:commandButton action="#{personController.editPerson(person.id)}" value="Düzenle" styleClass="btn btn-primary">
+                   
+                </h:commandButton>
+                </h:column>
+                <h:column>
+                <f:facet name="header">Sil</f:facet>
+                <h:commandButton action="#{personController.personDelete(person.id)}" value="Sil" styleClass="btn btn-danger">
+                   
+                </h:commandButton>
+                </h:column>
+            
+        </h:dataTable>
+       
+    </h:form>
+</h:body>
+</html>
