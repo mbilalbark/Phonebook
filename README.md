@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>phone Book</title>
+
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
 
 <body><div class="container"><h1 id="phone-book-web-uygulaması">Phone Book Web Uygulaması</h1>
