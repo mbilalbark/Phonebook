@@ -26,6 +26,6 @@
 
 <ul>
 <li>Proje Maven teknolojisi kullanılarak geliştirildiği için ilk açıldığında kütüphanelerde hata verebilir bu hatanın çözümü için projeye sağ tık yaparak Maven-&gt; Update Project e tıklayınız. Offline seçeneğine tik atarak işlemi tamamlayınız eksik olan kütüphaneleri indirip kurulacaktır.</li>
-<li>Proje klasöründeki phoneBook.sql veritabanını yükleyiniz. </li>
+<li>Proje klasöründeki phonebook.sql veritabanını yükleyiniz. </li>
 </ul></div></body>
 </html>
