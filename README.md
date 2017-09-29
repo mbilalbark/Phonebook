@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>phone Book</title>
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-</head>
+
 <body><div class="container"><h1 id="phone-book-web-uygulaması">Phone Book Web Uygulaması</h1>
 
 <p><strong>Kurulum Aşamaları</strong> </p>
